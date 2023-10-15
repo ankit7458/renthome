@@ -32,7 +32,6 @@ const Navbar = () => {
                                 </div>
                             </div>
                             <div className="col-sm">
-
                             </div>
                         </div>
                     </div>

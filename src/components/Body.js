@@ -3,6 +3,7 @@ import data from '../dummydata'
 import Roomcards from '../components/roomcards'
 import Footer from '../components/Footer'
 
+
 const Body = (props) => {
 
     return (

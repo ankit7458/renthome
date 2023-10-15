@@ -1,3 +1,10 @@
+/* *-----------globle css------------------* */
+
+body {
+    background-color: gray;
+}
+
+
 
 /* *---------------------Header(Navbar carousel)------------------* */
 
@@ -19,16 +26,26 @@
     height: 500px;
 }
 
-.card {
-    width: 18rem;
+.card-c {
+    border: 1px solid red;
+    margin: 0.5rem;
+    width: 25rem;
+
 }
 
 
 /* *----------Body code will be write here------------------* */
 
-
+.body-c {
+    margin-top: 20px;
+}
 
 
 
 
 /* *----------Footer code will be write here------------------* */
+
+.footer {
+    background-color: #45526e;
+    /* height: 20rem; */
+}
