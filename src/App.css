@@ -14,3 +14,7 @@
 .carousel-item img {
     height: 500px;
 }
+
+.card {
+    width: 18rem;
+}
