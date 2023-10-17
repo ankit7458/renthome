@@ -45,7 +45,7 @@ body {
     right: 0;
     bottom: 0;
     background: rgba(255, 255, 255, 0.4); /* Adjust the color and opacity as needed */
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(1.5px);
     z-index: 1;
   }
 
@@ -55,6 +55,12 @@ body {
     z-index: 2;
   }
 
+.container_login_form{
+  margin-top: 20px;    /* Margin at the top */
+  margin-right: 30px;  /* Margin on the right */
+  margin-bottom: 10px; /* Margin at the bottom */
+  margin-left: 30px;   /* Margin on the left */
+}
 
 /* *----------Body code will be write here------------------* */
 
