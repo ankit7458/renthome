@@ -33,6 +33,28 @@ body {
 
 }
 
+.carousel-item {
+    position: relative;
+  }
+
+.carousel-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.4); /* Adjust the color and opacity as needed */
+    backdrop-filter: blur(2px);
+    z-index: 1;
+  }
+
+  /* Prevent blur for Carousel.Caption */
+.carousel-caption {
+    backdrop-filter: none;
+    z-index: 2;
+  }
+
 
 /* *----------Body code will be write here------------------* */
 
