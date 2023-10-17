@@ -10,20 +10,81 @@ body {
 
 
 .navbar-c {
-    opacity: 0.4;
+    opacity: 0.9;
 }
 
-.search-bar {
-    height: 35px;
-    width: 700px;
+.navbar_home_icon{
+    margin-right: 10px;
 }
 
-.carousel-c {
-    height: 500px;
+.navbar_login_button{
+    margin-left: 10px;
+}
+
+.navbar_search_button{
+    margin-left: -15px;
+    margin-right: 10px;
+    /* z-index: 1; */
+}
+
+.container_login_form{
+    margin-top: 20px;    /* Margin at the top */
+    margin-right: 30px;  /* Margin on the right */
+    margin-bottom: 10px; /* Margin at the bottom */
+    margin-left: 30px;   /* Margin on the left */
+  }
+
+.grid_items {
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.icon-large {
+    font-size: 3rem; /* Adjust the size as needed */
+  }
+
+.col-1{
+    background-color: #8ecae6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.col-2{
+    background-color: #219ebc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.col-3{
+    background-color: #023047;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.col-4{
+    background-color: #ffb703;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.col-5{
+    background-color: #fb8500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+
+.carousel {
+    margin-top: 55px;
+    /* margin-left: 50px;
+    margin-right: 50px; */
 }
 
 .carousel-item img {
-    height: 500px;
+    height: 180px;
+    
 }
 
 .card-c {
@@ -32,6 +93,29 @@ body {
     width: 25rem;
 
 }
+
+.carousel-item {
+    position: relative;
+  }
+
+.carousel-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(152, 146, 146, 0.4); /* Adjust the color and opacity as needed */
+    backdrop-filter: blur(1.5px);
+    z-index: 1;
+  }
+
+  /* Prevent blur for Carousel.Caption */
+.carousel-caption {
+    backdrop-filter: none;
+    z-index: 2;
+  }
+
 
 
 /* *----------Body code will be write here------------------* */
