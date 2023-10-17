@@ -47,7 +47,7 @@ function CarouselFadeExample() {
       </Carousel>
 
       {/* 5 Buttons: Property, Recent, Budget, Filter, Location:- */}
-      <Container className="grid_items">
+      <Container className="center-container grid_items">
         <Row>
           <Col>
             <Button variant="success">
