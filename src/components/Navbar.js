@@ -1,3 +1,4 @@
+import "bootstrap/dist/css/bootstrap.css";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -9,6 +10,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { useState } from "react";
 import Modal from "react-bootstrap/Modal";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 function MyNavbar() {
   const [show, setShow] = useState(false);
@@ -39,14 +41,15 @@ function MyNavbar() {
               />
             </Col>
             <Col xs="auto">
-              <Button type="submit">Search</Button>
+              <Button className="navbar_search_button" type="submit"><i class="bi bi-search"></i></Button>
             </Col>
           </Row>
         </Form>
         &nbsp;
+
         {/* Modal Sign-in Button:  */}
-        <Button variant="success" onClick={handleShow}>
-          Sign in
+        <Button className="navbar_login_button" variant="secondary" onClick={handleShow}>
+          <i class="bi bi-person"></i>
         </Button>
         <Modal show={show} onHide={handleClose}>
           {/* Form: */}
@@ -71,8 +74,8 @@ function MyNavbar() {
             <Button variant="danger" onClick={handleClose}>
               Close
             </Button>
-            <Button variant="success" type ="submit" onClick={handleClose}>
-              Submit
+            <Button variant="success" type="submit" onClick={handleClose}>
+              Login
             </Button>
           </Modal.Footer>
         </Modal>
