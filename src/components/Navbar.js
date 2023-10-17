@@ -2,10 +2,8 @@ import "bootstrap/dist/css/bootstrap.css";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import InputGroup from "react-bootstrap/InputGroup";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { useState } from "react";
@@ -20,6 +18,7 @@ function MyNavbar() {
   return (
     <Navbar fixed="top" expand="lg" className=" bg-dark navbar-c text-light">
       <Container fluid>
+        <Nav.Link className="navbar_home_icon" href="#home"><i class="bi bi-house"></i></Nav.Link>
         <Navbar.Brand href="#" className="text-light">
           RentHome.com
         </Navbar.Brand>
@@ -39,6 +38,7 @@ function MyNavbar() {
                 placeholder="Search"
                 className=" mr-sm-2"
               />
+              
             </Col>
             <Col xs="auto">
               <Button className="navbar_search_button" type="submit"><i class="bi bi-search"></i></Button>
@@ -52,7 +52,8 @@ function MyNavbar() {
           <i class="bi bi-person"></i>
         </Button>
         <Modal show={show} onHide={handleClose}>
-          {/* Form: */}
+
+          {/* Modal Form: */}
           <div className="container_login_form ">
             <Form>
               <Form.Group className="mb-3" controlId="formBasicEmail">

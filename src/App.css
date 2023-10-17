@@ -13,6 +13,10 @@ body {
     opacity: 0.9;
 }
 
+.navbar_home_icon{
+    margin-right: 10px;
+}
+
 .navbar_login_button{
     margin-left: 10px;
 }
@@ -20,7 +24,7 @@ body {
 .navbar_search_button{
     margin-left: -15px;
     margin-right: 10px;
-    z-index: 1;
+    /* z-index: 1; */
 }
 
 .container_login_form{
@@ -30,17 +34,57 @@ body {
     margin-left: 30px;   /* Margin on the left */
   }
 
-.search-bar {
-    height: 35px;
-    width: 700px;
+.grid_items {
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
-.carousel-c {
-    height: 500px;
+.icon-large {
+    font-size: 3rem; /* Adjust the size as needed */
+  }
+
+.col-1{
+    background-color: #8ecae6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.col-2{
+    background-color: #219ebc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.col-3{
+    background-color: #023047;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.col-4{
+    background-color: #ffb703;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.col-5{
+    background-color: #fb8500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+
+.carousel {
+    margin-top: 55px;
+    /* margin-left: 50px;
+    margin-right: 50px; */
 }
 
 .carousel-item img {
-    height: 500px;
+    height: 180px;
+    
 }
 
 .card-c {
@@ -61,7 +105,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.4); /* Adjust the color and opacity as needed */
+    background: rgba(152, 146, 146, 0.4); /* Adjust the color and opacity as needed */
     backdrop-filter: blur(1.5px);
     z-index: 1;
   }
