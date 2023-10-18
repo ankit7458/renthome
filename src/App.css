@@ -34,11 +34,12 @@ body {
     margin-left: 30px;   /* Margin on the left */
   }
 
-.grid_items {
+.center-container {
     margin-top: 20px;
-    margin-left: 50px;
-    margin-right: 50px;
-}
+    /* margin: 0 auto; This centers the container horizontally */
+    max-width: 100%; /* This ensures the container doesn't exceed the viewport width */
+  }
+  
 
 .icon-large {
     font-size: 3rem; /* Adjust the size as needed */
