@@ -56,13 +56,6 @@ body {
     
 }
 
-.card-c {
-    border: 1px solid red;
-    margin: 0.5rem;
-    width: 25rem;
-
-}
-
 .carousel-item {
     position: relative;
   }
@@ -91,6 +84,13 @@ body {
 
 .body-c {
     margin-top: 20px;
+}
+
+.card-c {
+    border: 1px solid red;
+    margin: 0.5rem;
+    width: 20rem;
+
 }
 
 
