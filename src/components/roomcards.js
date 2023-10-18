@@ -5,7 +5,7 @@ import React from "react";
 function Roomcards(props) {
     return(
         <div className="card card-c" >
-             <img src="./images/h2.jpg" className="card-img-top" alt="Image not found" />
+             <img src={props.img} className="card-img-top" alt="Image not found" />
              <div className="card-body">
                  <h5 className="card-title">{props.title}</h5>
                  <p className="card-text">{props.content}</p>
