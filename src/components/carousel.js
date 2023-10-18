@@ -1,8 +1,6 @@
+import Grid_Menu from "./Carousel Components/Grid_Menu";
 import Carousel from "react-bootstrap/Carousel";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Button from "react-bootstrap/Button";
+
 
 function CarouselFadeExample() {
   return (
@@ -17,7 +15,7 @@ function CarouselFadeExample() {
           <div className="carousel-overlay"></div>
           <Carousel.Caption>
             <h3 className="text-light">Welcome Home</h3>
-            <p className="text-dark">Discover Your Dream Home</p>
+            <p className="text-light">Discover Your Dream Home</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -28,8 +26,8 @@ function CarouselFadeExample() {
           />
           <div className="carousel-overlay"></div>
           <Carousel.Caption>
-            <h3 className="text-dark">Budget-Friendly Living</h3>
-            <p className="text-dark">Rent Homes That Suit Your Wallet</p>
+            <h3 className="text-light">Budget-Friendly Living</h3>
+            <p className="text-light">Rent Homes That Suit Your Wallet</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -40,42 +38,13 @@ function CarouselFadeExample() {
           />
           <div className="carousel-overlay"></div>
           <Carousel.Caption>
-            <h3 className="text-dark">Location, Location, Location</h3>
-            <p className="text-dark">Hassle-Free Home Search</p>
+            <h3 className="text-light">Location, Location, Location</h3>
+            <p className="text-light">Hassle-Free Home Search</p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
-
-      {/* 5 Buttons: Property, Recent, Budget, Filter, Location:- */}
-      <Container className="grid_items">
-        <Row>
-          <Col>
-            <Button variant="success">
-              <i class="bi bi-building"></i>
-            </Button>{" "}
-          </Col>
-          <Col>
-            <Button variant="info">
-              <i class="bi bi-clock"></i>
-            </Button>{" "}
-          </Col>
-          <Col>
-            <Button variant="primary">
-              <i class="bi bi-currency-rupee"></i>
-            </Button>{" "}
-          </Col>
-          <Col>
-            <Button variant="warning">
-              <i class="bi bi-funnel"></i>
-            </Button>{" "}
-          </Col>
-          <Col>
-            <Button variant="danger">
-              <i class="bi bi-geo-alt"></i>
-            </Button>{" "}
-          </Col>
-        </Row>
-      </Container>
+      <Grid_Menu/>
+      
     </>
   );
 }
