@@ -93,6 +93,21 @@ body {
 
 }
 
+/* ---------Rating icon--------- */
+.star {
+    color: gold;
+    font-size: 1rem;
+  }
+  
+  .star-filled {
+    color: gold;
+  }
+  
+  .star-empty {
+    color: #ccc;
+  }
+  
+
 
 
 

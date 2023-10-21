@@ -1,6 +1,6 @@
 import React from "react";
 import data from '../dummydata'
-import Roomcards from '../components/roomcards'
+import Roomcards from './Roomcards/Roomcards'
 import Footer from '../components/Footer'
 
 
