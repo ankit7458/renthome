@@ -13,37 +13,43 @@ body {
     opacity: 0.9;
 }
 
-.navbar_home_icon{
+.navbar_home_icon {
     margin-right: 10px;
 }
 
-.navbar_login_button{
+.navbar_login_button {
     margin-left: 10px;
 }
 
-.navbar_search_button{
+.navbar_search_button {
     margin-left: -15px;
     margin-right: 10px;
     /* z-index: 1; */
 }
 
-.container_login_form{
-    margin-top: 20px;    /* Margin at the top */
-    margin-right: 30px;  /* Margin on the right */
-    margin-bottom: 10px; /* Margin at the bottom */
-    margin-left: 30px;   /* Margin on the left */
-  }
+.container_login_form {
+    margin-top: 20px;
+    /* Margin at the top */
+    margin-right: 30px;
+    /* Margin on the right */
+    margin-bottom: 10px;
+    /* Margin at the bottom */
+    margin-left: 30px;
+    /* Margin on the left */
+}
 
 .center-container {
     margin-top: 20px;
     /* margin: 0 auto; This centers the container horizontally */
-    max-width: 100%; /* This ensures the container doesn't exceed the viewport width */
-  }
-  
+    max-width: 100%;
+    /* This ensures the container doesn't exceed the viewport width */
+}
+
 
 .icon-large {
-    font-size: 3rem; /* Adjust the size as needed */
-  }
+    font-size: 3rem;
+    /* Adjust the size as needed */
+}
 
 .carousel {
     margin-top: 55px;
@@ -53,12 +59,12 @@ body {
 
 .carousel-item img {
     height: 180px;
-    
+
 }
 
 .carousel-item {
     position: relative;
-  }
+}
 
 .carousel-overlay::before {
     content: "";
@@ -67,16 +73,17 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(152, 146, 146, 0.4); /* Adjust the color and opacity as needed */
+    background: rgba(152, 146, 146, 0.4);
+    /* Adjust the color and opacity as needed */
     backdrop-filter: blur(1.5px);
     z-index: 1;
-  }
+}
 
-  /* Prevent blur for Carousel.Caption */
+/* Prevent blur for Carousel.Caption */
 .carousel-caption {
     backdrop-filter: none;
     z-index: 2;
-  }
+}
 
 
 
@@ -93,20 +100,33 @@ body {
 
 }
 
+/* --------------card image--------------------------- */
+
+.card-shadow {
+    transition: box-shadow 0.1s ease-in-out; /* Add a smooth transition effect */
+    /* Initial shadow style (no shadow) */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-shadow:hover {
+    /* Shadow style on hover */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
 /* ---------Rating icon--------- */
 .star {
     color: gold;
     font-size: 1rem;
-  }
-  
-  .star-filled {
+}
+
+.star-filled {
     color: gold;
-  }
-  
-  .star-empty {
+}
+
+.star-empty {
     color: #ccc;
-  }
-  
+}
+
 
 
 
@@ -127,6 +147,7 @@ body {
 .text-white {
     color: #fff;
 }
+
 /* CSS */
 .row {
     -bs-gutter-x: 1.5rem;
@@ -146,15 +167,17 @@ body {
         flex-direction: row;
     }
 }*/
-.contact p{
+.contact p {
     padding: 0px;
-    
+
 }
-.contact p a{
+
+.contact p a {
     list-style: none;
     text-decoration: none;
-    
+
 }
+
 .link ul {
     list-style: none;
     padding: 0px;
@@ -187,13 +210,15 @@ body {
 
 .social-links li a {
     text-decoration: none;
-    color: #eee7e7; /* Light white color */
+    color: #eee7e7;
+    /* Light white color */
     font-size: 17px;
 }
 
 .social-links a:hover {
     text-decoration: underline;
-    color: #ffffff; /* White color on hover */
+    color: #ffffff;
+    /* White color on hover */
     font-size: 18px;
 }
 

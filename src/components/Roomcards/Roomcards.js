@@ -9,11 +9,10 @@ import RatingIcon from './RatingIcon'
 import PriceTag from './PriceTag';
 
 
-
 function Roomcards(props) {
     return (
-        <Card className="card-c">
-            <Card.Img variant="top" src={props.img} />
+        <Card className="card-c card-shadow "  >
+            <a href="#"><Card.Img className="image-container" variant="top" src={props.img} /></a>  
             <Card.Body>
                 <Container>
                     <Row>
@@ -30,7 +29,7 @@ function Roomcards(props) {
                 <Card.Text>
                     {props.content}
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
+                {/* <Button variant="primary">Go somewhere</Button> */}
             </Card.Body>
         </Card>
     )
