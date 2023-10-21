@@ -155,6 +155,9 @@ body {
     text-decoration: none;
     
 }
+.link{
+    width: 10px;
+}
 .link ul {
     list-style: none;
     padding: 0px;
@@ -203,4 +206,25 @@ body {
     margin-right: 10px;
     font-size: 24px;
     color: #fff;
+}
+
+
+
+/* *----------About us page Css code will be write here------------------* */
+
+
+.about{
+    padding: 0 120px;
+    margin-top: 20px;
+    /* text-align: center; */
+}
+.heading h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.about_body{
+
+    text-align: left;
 }
