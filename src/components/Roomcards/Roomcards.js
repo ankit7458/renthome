@@ -6,6 +6,7 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import 'font-awesome/css/font-awesome.min.css';
 import RatingIcon from './RatingIcon'
+import PriceTag from './PriceTag';
 
 
 
@@ -17,7 +18,7 @@ function Roomcards(props) {
                 <Container>
                     <Row>
                         <Col>
-                            <Card.Title>Money</Card.Title>
+                            <p><PriceTag price={props.price} /></p>
                         </Col>
                         <Col>
                             <div>

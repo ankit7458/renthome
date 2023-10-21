@@ -16,7 +16,7 @@ const Body = (props) => {
                                 <Roomcards
                                     key={dataItem.key}
                                     img={dataItem.img}
-                                    title={dataItem.title}
+                                    price={dataItem.price}
                                     content={dataItem.content}
                                 />
                             </div>
