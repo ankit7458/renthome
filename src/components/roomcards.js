@@ -7,7 +7,9 @@ function Roomcards(props) {
         <div className="card card-c" >
              <img src={props.img} className="card-img-top" alt="Image not found" />
              <div className="card-body">
-                 <h5 className="card-title">{props.title}</h5>
+                <div>
+                <h5 className="card-title">{props.title}</h5>
+                </div>
                  <p className="card-text">{props.content}</p>
                  <a href="#" className="btn btn-primary">Check detail</a>
              </div>
