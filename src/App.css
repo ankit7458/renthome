@@ -44,8 +44,95 @@ body {
 
 
 /* *----------Footer code will be write here------------------* */
+/* Footer.css */
 
 .footer {
-    background-color: #45526e;
-    /* height: 20rem; */
+    background-color: #252525;
+    padding: 10px 0;
+}
+
+.footer h6 {
+    font-size: 20px;
+    color: #e6bfae;
+}
+
+.text-white {
+    color: #fff;
+}
+/* CSS */
+.row {
+    -bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+
+/* For small screens (less than 768px) */
+/*@media (max-width: 767px) {
+    .row {
+        flex-direction: row;
+    }
+}*/
+.contact p{
+    padding: 0px;
+    
+}
+.contact p a{
+    list-style: none;
+    text-decoration: none;
+    
+}
+.link ul {
+    list-style: none;
+    padding: 0px;
+}
+
+.link ul li {
+    margin-bottom: 8px;
+}
+
+.link ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 17px;
+}
+
+.link ul li a:hover {
+    text-decoration: underline;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+}
+
+.social-links li {
+    margin-bottom: 10px;
+}
+
+.social-links li a {
+    text-decoration: none;
+    color: #eee7e7; /* Light white color */
+    font-size: 17px;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+    color: #ffffff; /* White color on hover */
+    font-size: 18px;
+}
+
+
+
+.social-icons a {
+    margin-right: 10px;
+    font-size: 24px;
+    color: #fff;
 }
