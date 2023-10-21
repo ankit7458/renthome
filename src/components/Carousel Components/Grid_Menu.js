@@ -4,6 +4,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
+import Search_Rental_Property from './Search_Rental_Property';
 
 function Grid_Menu() {
   return (
@@ -12,15 +13,10 @@ function Grid_Menu() {
       <Container className="center-container grid_items">
         <Row>
         <Col>
-            {/* <Button variant="success">
-            <i class="bi bi-file-earmark-plus"></i>
-            </Button>{" "} */}
             <Rent_Property_Menu/>
           </Col>
           <Col>
-            <Button variant="primary">
-              <i class="bi bi-building"></i>
-            </Button>{" "}
+            <Search_Rental_Property/>
           </Col>
           <Col>
             <Button variant="info">
