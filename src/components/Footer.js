@@ -33,7 +33,9 @@ const Footer = (props) => {
                                 <ul>
                                     <li><a href="#">Home</a></li>
                                     <li><a href="#">Contact Us</a></li>
-                                    <li><a href="#">Feedback</a></li>
+                                    <li>
+                                        <Link to="/Feedback">Feedback</Link>
+                                    </li>
                                     <li>
                                       <Link to="/Aboutus">About Us</Link>
                                     </li>
