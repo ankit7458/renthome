@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from 'react-router-dom';
+
 
 const Footer = (props) => {
     return (
@@ -30,8 +32,11 @@ const Footer = (props) => {
                                 </h6>
                                 <ul>
                                     <li><a href="#">Home</a></li>
-                                    <li><a href="#">Rooms</a></li>
-                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="#">Feedback</a></li>
+                                    <li>
+                                      <Link to="/Aboutus">About Us</Link>
+                                    </li>
                                     <li><a href="#">Terms and Conditions</a></li>
                                     <li><a href="#">Privacy Policy</a></li>
                                 </ul>
