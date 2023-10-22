@@ -38,7 +38,9 @@ const Footer = (props) => {
                                       <Link to="/Aboutus">About Us</Link>
                                     </li>
                                     <li><a href="#">Terms and Conditions</a></li>
-                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li>
+                                        <Link to="/Policy">Privacy Policy</Link>
+                                    </li>
                                 </ul>
                             </div>
                             <hr className="w-100 clearfix d-md-none" />
