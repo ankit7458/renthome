@@ -5,7 +5,8 @@ import Navbar from './components/Navbar';
 import Carousel from './components/carousel';
 import Body from './components/Body';
 import Aboutus from './components/Aboutus'; // Import the AboutUs component
-
+import Roomcards from './components/Roomcards/Roomcards';
+import Carddeatail from './components/Roomcards/carddeatail'; // Import Carddeatail from the same folder
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Update the import
 
 function App() {
@@ -16,7 +17,9 @@ function App() {
         <Carousel />
         <Routes>
           <Route path="/Aboutus" element={<Aboutus />} /> {/* Render the Aboutus component for the "/aboutus" route */}
-          <Route path="/" element={<Body />} />
+          <Route path="/" element={<Body />} />          
+          <Route path="/roomcards" element={<Roomcards />} />
+          <Route path="/roomcards/carddeatail" element={<Carddeatail />} />
         </Routes>
       </div>
     </Router>
