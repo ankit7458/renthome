@@ -15,6 +15,7 @@ const Body = (props) => {
                             <div className="col-sm">
                                 <Roomcards
                                     key={dataItem.key}
+                                    title={dataItem.title}
                                     img={dataItem.img}
                                     price={dataItem.price}
                                     content={dataItem.content}

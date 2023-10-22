@@ -13,10 +13,9 @@ function Roomcards(props) {
     return (
         <Card className="card-c card-shadow "  >
             <a href="#"><Card.Img className="image-container" variant="top" src={props.img} /></a>  
-            <Card.Body>
-                <Container>
+            <Container >
                     <Row>
-                        <Col>
+                        <Col className="price-back">
                             <p><PriceTag price={props.price} /></p>
                         </Col>
                         <Col>
@@ -26,7 +25,9 @@ function Roomcards(props) {
                         </Col>
                     </Row>
                 </Container>
+            <Card.Body>
                 <Card.Text>
+                    <p className="card-title">{props.title}</p>
                     {props.content}
                 </Card.Text>
                 {/* <Button variant="primary">Go somewhere</Button> */}
