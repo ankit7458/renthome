@@ -8,6 +8,7 @@ import Aboutus from './components/Aboutus'; // Import the AboutUs component
 import Policy from './components/Policy';//Import the policy componetnt
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Update the import
+import Feedback from './components/Feedback';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/Aboutus" element={<Aboutus />} /> {/* Render the Aboutus component for the "/aboutus" route */}
           <Route path="/" element={<Body />} />
           <Route path ="/Policy"element = {<Policy />}/> 
+          <Route path ="/Feedback"element = {<Feedback />}/> 
         </Routes>
       </div>
     </Router>
