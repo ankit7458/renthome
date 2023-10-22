@@ -34,6 +34,24 @@ const data = [
         img: "https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
         price: "16000",
         content: "No are somthing new to check let me tell you about this what is this check it out"
+    },
+    {
+        key:7,
+        img: "https://cdn.pixabay.com/photo/2017/11/16/19/29/cottage-2955582_1280.jpg",
+        price: "6000",
+        content: "these are somthing new to check let me tell you about this what is this check it out"
+    },
+    {
+        key:8,
+        img: "https://cdn.pixabay.com/photo/2017/06/13/22/42/kitchen-2400367_1280.jpg",
+        price: "9000",
+        content: "these are somthing new to check let me tell you about this what is this check it out"
+    },
+    {
+        key:9,
+        img: "https://cdn.pixabay.com/photo/2017/08/10/05/18/home-2618511_1280.jpg",
+        price: "16000",
+        content: "No are somthing new to check let me tell you about this what is this check it out"
     }
     
 ];
