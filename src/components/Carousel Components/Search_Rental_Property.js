@@ -16,7 +16,7 @@ function Search_Rental_Property() {
   return (
     <>
       <Button variant="primary" onClick={handleShow}>
-        <i class="bi bi-building"></i>
+        <i class="bi bi-building"> Rent</i>
       </Button>
 
       <Modal show={show} onHide={handleClose} animation={false}>
