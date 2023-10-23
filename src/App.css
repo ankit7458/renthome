@@ -103,7 +103,8 @@ body {
 /* --------------card image--------------------------- */
 
 .card-shadow {
-    transition: box-shadow 0.1s ease-in-out; /* Add a smooth transition effect */
+    transition: box-shadow 0.1s ease-in-out;
+    /* Add a smooth transition effect */
     /* Initial shadow style (no shadow) */
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
@@ -127,7 +128,10 @@ body {
     color: #ccc;
 }
 
-
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
 
 
 
@@ -177,6 +181,7 @@ body {
     text-decoration: none;
 
 }
+
 .link ul {
     list-style: none;
     padding: 0px;
@@ -234,18 +239,19 @@ body {
 /* *----------About us page Css code will be write here------------------* */
 
 
-.about{
+.about {
     padding: 0 120px;
     margin-top: 20px;
     /* text-align: center; */
 }
-.heading h1{
+
+.heading h1 {
     text-align: center;
     font-weight: bold;
     font-size: 40px;
 }
 
-.about_body{
+.about_body {
 
     text-align: left;
 }
