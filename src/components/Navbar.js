@@ -4,20 +4,11 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import { useState } from "react";
-import Modal from "react-bootstrap/Modal";
+import Image from "react-bootstrap/Image";
 import "bootstrap-icons/font/bootstrap-icons.css";
-
 import InputGroup from "react-bootstrap/InputGroup";
 
 function MyNavbar() {
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
   return (
     <Navbar
       fixed="top"
@@ -25,10 +16,15 @@ function MyNavbar() {
       className="navbar navbar-dark bg-dark navbar-c"
     >
       <Container fluid>
-        <Nav.Link className="navbar_home_icon  text-light" href="#home">
-          <i class="bi bi-house"></i>
-        </Nav.Link>
-        <Navbar.Brand href="#" className="text-light">
+        <Navbar.Brand href="/#" className="text-light">
+            <Image
+              src="./Images/rentHomeLogo.png"
+              width="30"
+              height="30"
+              className="d-inline-block align-top mx-2"
+              alt="React Bootstrap logo"
+              roundedCircle
+            />
           RentHome.com
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />

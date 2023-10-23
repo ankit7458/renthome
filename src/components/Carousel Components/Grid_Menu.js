@@ -8,10 +8,10 @@ import Search_Rental_Property from "./Search_Rental_Property";
 
 function Grid_Menu() {
   return (
-    <div>
+    <div className="navbar-dark bg-dark navbar-c p-2">
       {/* 5 Buttons: Property, Recent, Budget, Filter, Location:- */}
-      <Container className="center-container grid_items">
-        <Row>
+      <Container className="">
+        <Row xs={4} md={4} lg={4}>
           <Col>
             <div class="d-flex justify-content-center">
               <Rent_Property_Menu />
@@ -24,15 +24,8 @@ function Grid_Menu() {
           </Col>
           <Col>
             <div class="d-flex justify-content-center">
-              <Button variant="info">
-                <i class="bi bi-clock-alt text-light"> Recent</i>
-              </Button>{" "}
-            </div>
-          </Col>
-          <Col>
-            <div class="d-flex justify-content-center">
               <Button variant="warning">
-                <i class="bi bi-funnel-alt text-light"> Filter</i>
+                <i class="bi bi-funnel text-light"> Filter</i>
               </Button>{" "}
             </div>
           </Col>
