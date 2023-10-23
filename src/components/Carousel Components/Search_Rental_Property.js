@@ -83,6 +83,25 @@ function Search_Rental_Property() {
               <Container>
                 <Row>
                   <Col>
+                    <Form.Group className="mb-3" controlId="checkOutDate">
+                      <Form.Control type="date" placeholder="Check In" />
+                    </Form.Group>
+                  </Col>
+                  <Col>
+                    <Form.Group className="mb-3" controlId="checkInDate">
+                      <Form.Control type="date" placeholder="Check Out" />
+                    </Form.Group>
+                  </Col>
+                </Row>
+              </Container>
+            </Form.Group>
+            <Form.Group
+              className="mb-3"
+              controlId="exampleForm.ControlTextarea1"
+            >
+              <Container>
+                <Row>
+                  <Col>
                     <Form.Group className="mb-3" controlId="formBasicPassword">
                       <Form.Control type="number" placeholder="₹ Min_Range" />
                     </Form.Group>
@@ -95,6 +114,7 @@ function Search_Rental_Property() {
                 </Row>
               </Container>
             </Form.Group>
+            
           </Form>
         </Modal.Body>
         <Modal.Footer>
