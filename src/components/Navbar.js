@@ -7,6 +7,7 @@ import Form from "react-bootstrap/Form";
 import Image from "react-bootstrap/Image";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import InputGroup from "react-bootstrap/InputGroup";
+import { Link } from "react-router-dom";
 
 function MyNavbar() {
   return (
@@ -16,7 +17,7 @@ function MyNavbar() {
       className="navbar navbar-dark bg-dark navbar-c"
     >
       <Container fluid>
-        <Navbar.Brand href="/#" className="text-light">
+          <Navbar.Brand as={Link} to="/" className="text-light">
             <Image
               src="./Images/rentHomeLogo.png"
               width="30"
@@ -25,8 +26,8 @@ function MyNavbar() {
               alt="React Bootstrap logo"
               roundedCircle
             />
-          RentHome.com
-        </Navbar.Brand>
+            RentHome.com
+          </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
