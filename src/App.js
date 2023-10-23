@@ -6,7 +6,7 @@ import Carousel from './components/carousel';
 import Body from './components/Body';
 import Aboutus from './components/Aboutus'; // Import the AboutUs component
 import Policy from './components/Policy';//Import the policy componetnt
-
+import Carddeatail from './components/Roomcards/carddeatail';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Update the import
 import Feedback from './components/Feedback';
 
@@ -21,6 +21,7 @@ function App() {
           <Route path="/" element={<Body />} />
           <Route path ="/Policy"element = {<Policy />}/> 
           <Route path ="/Feedback"element = {<Feedback />}/> 
+          <Route path="/roomcards/carddeatail" element={<Carddeatail />} />
         </Routes>
       </div>
     </Router>
