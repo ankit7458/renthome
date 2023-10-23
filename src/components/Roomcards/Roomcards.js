@@ -7,13 +7,14 @@ import Container from 'react-bootstrap/Container';
 import 'font-awesome/css/font-awesome.min.css';
 import RatingIcon from './RatingIcon'
 import PriceTag from './PriceTag';
+import { Link } from 'react-router-dom';
 
 
 function Roomcards(props) {
     return (
-        <Card className="card-c card-shadow "  >
-            <a href="#"><Card.Img className="image-container" variant="top" src={props.img} /></a>  
-            <Container >
+        <Card className="card-c card-shadow "  > 
+            <Link to="/roomcards/carddeatail"><Card.Img className="image-container" variant="top" src={props.img} /></Link> 
+                <Container>
                     <Row>
                         <Col className="price-back">
                             <p><PriceTag price={props.price} /></p>
