@@ -16,7 +16,7 @@ function Rent_Property_Menu() {
   return (
     <>
       <Button variant="success" onClick={handleShow}>
-        <i class="bi bi-file-earmark-plus"></i>
+        <i class="bi bi-file-earmark-plus"> Property</i>
       </Button>
 
       <Modal show={show} onHide={handleClose} animation={false}>

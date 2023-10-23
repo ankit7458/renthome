@@ -1,25 +1,30 @@
 import "bootstrap/dist/css/bootstrap.css";
+import LoginButton from "./Navbar_Components/LoginButton";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import { useState } from "react";
-import Modal from "react-bootstrap/Modal";
+import Image from "react-bootstrap/Image";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import InputGroup from "react-bootstrap/InputGroup";
 
 function MyNavbar() {
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
   return (
-    <Navbar fixed="top" expand="lg" className=" bg-dark navbar-c text-light">
+    <Navbar
+      fixed="top"
+      expand="lg"
+      className="navbar navbar-dark bg-dark navbar-c"
+    >
       <Container fluid>
-        <Nav.Link className="navbar_home_icon" href="#home"><i class="bi bi-house"></i></Nav.Link>
-        <Navbar.Brand href="#" className="text-light">
+        <Navbar.Brand href="/#" className="text-light">
+            <Image
+              src="./Images/rentHomeLogo.png"
+              width="30"
+              height="30"
+              className="d-inline-block align-top mx-2"
+              alt="React Bootstrap logo"
+              roundedCircle
+            />
           RentHome.com
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
@@ -29,58 +34,25 @@ function MyNavbar() {
             style={{ maxHeight: "100px" }}
             navbarScroll
           ></Nav>
-        </Navbar.Collapse>
-        <Form inline>
-          <Row>
-            <Col xs="auto">
+          <Form inline>
+            <InputGroup>
               <Form.Control
                 type="text"
                 placeholder="Search"
                 className=" mr-sm-2"
               />
-              
-            </Col>
-            <Col xs="auto">
-              <Button className="navbar_search_button" type="submit"><i class="bi bi-search"></i></Button>
-            </Col>
-          </Row>
-        </Form>
-        &nbsp;
-
-        {/* Modal Sign-in Button:  */}
-        <Button className="navbar_login_button" variant="secondary" onClick={handleShow}>
-          <i class="bi bi-person"></i>
-        </Button>
-        <Modal show={show} onHide={handleClose}>
-
-          {/* Modal Form: */}
-          <div className="container_login_form ">
-            <Form>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="" />
-              </Form.Group>
-
-              <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="" />
-              </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                <Form.Check type="checkbox" label="Stay Signed-in" />
-              </Form.Group>
-            </Form>
+              <InputGroup.Text id="basic-addon1">
+                <i class="bi bi-search"></i>
+              </InputGroup.Text>
+            </InputGroup>
+          </Form>
+          &nbsp;
+          <div className="d-flex flex-row-reverse">
+            <div>
+              <LoginButton />
+            </div>
           </div>
-
-          <Modal.Footer>
-            <Button variant="danger" onClick={handleClose}>
-              Close
-            </Button>
-            <Button variant="success" type="submit" onClick={handleClose}>
-              Login
-            </Button>
-          </Modal.Footer>
-        </Modal>
-        {/* Experiment */}
+        </Navbar.Collapse>
       </Container>
     </Navbar>
   );
