@@ -12,9 +12,15 @@ import { Link } from 'react-router-dom';
 
 function Roomcards(props) {
     return (
+
+        <Card className="card-c card-shadow "  >
+            <Link to="/roomcards/carddeatail"><Card.Img className="image-container" variant="top" src={props.img} /></Link>  
+            <Card.Body>
+                <Container>
         <Card className="card-c card-shadow "  > 
             <Link to="/roomcards/carddeatail"><Card.Img className="image-container" variant="top" src={props.img} /></Link> 
                 <Container>
+
                     <Row>
                         <Col className="price-back">
                             <p><PriceTag price={props.price} /></p>
