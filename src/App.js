@@ -21,7 +21,9 @@ function App() {
           <Route path="/" element={<Body />} />
           <Route path ="/Policy"element = {<Policy />}/> 
           <Route path ="/Feedback"element = {<Feedback />}/> 
+
           <Route path="/roomcards/carddeatail" element={<Carddeatail />} />
+
         </Routes>
       </div>
     </Router>
