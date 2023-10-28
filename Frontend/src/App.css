@@ -1,0 +1,333 @@
+/* *-----------globle css------------------* */
+
+body {
+    background-color: gray;
+}
+
+
+
+/* *---------------------Header(Navbar carousel)------------------* */
+
+
+.navbar-c {
+    opacity: 0.9;
+}
+
+.navbar_home_icon {
+    margin-right: 10px;
+}
+
+.navbar_login_button {
+    margin-left: 10px;
+}
+
+.navbar_search_button {
+    margin-left: -15px;
+    margin-right: 10px;
+    /* z-index: 1; */
+}
+
+.container_login_form {
+    margin-top: 20px;
+    /* Margin at the top */
+    margin-right: 30px;
+    /* Margin on the right */
+    margin-bottom: 10px;
+    /* Margin at the bottom */
+    margin-left: 30px;
+    /* Margin on the left */
+}
+
+.center-container {
+    margin-top: 20px;
+    /* margin: 0 auto; This centers the container horizontally */
+    max-width: 100%;
+    /* This ensures the container doesn't exceed the viewport width */
+}
+
+
+.icon-large {
+    font-size: 3rem;
+    /* Adjust the size as needed */
+}
+
+.carousel {
+    margin-top: 55px;
+    /* margin-left: 50px;
+    margin-right: 50px; */
+}
+
+.carousel-item img {
+    height: 180px;
+
+}
+
+.carousel-item {
+    position: relative;
+}
+
+.carousel-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(152, 146, 146, 0.4);
+    /* Adjust the color and opacity as needed */
+    backdrop-filter: blur(1.5px);
+    z-index: 1;
+}
+
+/* Prevent blur for Carousel.Caption */
+.carousel-caption {
+    backdrop-filter: none;
+    z-index: 2;
+}
+
+
+
+/* *----------Body code will be write here------------------* */
+
+.body-c {
+    margin-top: 20px;
+}
+
+.card-c {
+    border: 1px solid red;
+    margin: 0.5rem;
+    width: 20rem;
+
+}
+
+/* --------------card image--------------------------- */
+
+.card-shadow {
+    transition: box-shadow 0.1s ease-in-out;
+    /* Add a smooth transition effect */
+    /* Initial shadow style (no shadow) */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-shadow:hover {
+    /* Shadow style on hover */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* ---------Rating icon--------- */
+.star {
+    color: gold;
+    font-size: 1rem;
+}
+
+.star-filled {
+    color: gold;
+}
+
+.star-empty {
+    color: #ccc;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+
+
+/* *----------Footer code will be write here------------------* */
+/* Footer.css */
+
+.footer {
+    background-color: #252525;
+    padding: 10px 0;
+}
+
+.footer h6 {
+    font-size: 20px;
+    color: #e6bfae;
+}
+
+.text-white {
+    color: #fff;
+}
+
+/* CSS */
+.row {
+    -bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+
+/* For small screens (less than 768px) */
+/*@media (max-width: 767px) {
+    .row {
+        flex-direction: row;
+    }
+}*/
+.contact p {
+    padding: 0px;
+
+}
+
+.contact p a {
+    list-style: none;
+    text-decoration: none;
+
+}
+
+.link ul {
+    list-style: none;
+    padding: 0px;
+}
+
+.link ul li {
+    margin-bottom: 8px;
+}
+
+.link ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 17px;
+}
+
+.link ul li a:hover {
+    text-decoration: underline;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+}
+
+.social-links li {
+    margin-bottom: 10px;
+}
+
+.social-links li a {
+    text-decoration: none;
+    color: #eee7e7;
+    /* Light white color */
+    font-size: 17px;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+    color: #ffffff;
+    /* White color on hover */
+    font-size: 18px;
+}
+
+
+
+.social-icons a {
+    margin-right: 10px;
+    font-size: 24px;
+    color: #fff;
+}
+
+
+
+/* *----------About us page Css code will be write here------------------* */
+
+
+.about {
+    padding: 0 120px;
+    margin-top: 20px;
+    /* text-align: center; */
+}
+
+.heading h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.about_body {
+
+    text-align: left;
+}
+
+
+/* Feedback component styles */
+
+  textarea {
+    width: 100%;
+    padding: 0 100px;
+    margin-bottom: 20px;
+  }
+  
+  .modal-dialog {
+    max-width: 400px;
+  }
+  
+  /* Thank You modal styles */
+  .thank-you-message p {
+    font-size: 18px;
+    text-align: center;
+    padding: 20px;
+    background-color: #4CAF50;
+    color: #fff;
+  }
+  
+  .modal-content {
+    border: none;
+    border-radius: 10px;
+  }
+  
+  .modal-header {
+    border-bottom: none;
+  }
+  
+  .modal-title {
+    font-size: 24px;
+  }
+
+ /* CSS to style the buttons */
+.feedback_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; 
+    margin-bottom: 20px;
+  }
+  
+  .feedback_button button {
+    margin: 0 10px; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .feedback_button button.variant-danger {
+    background-color: #dc3545; 
+    color: #fff; 
+  }
+  
+  .feedback_button button.variant-primary {
+    background-color: #007bff; 
+    color: #fff; 
+  }
+  
+
+  /* card detail page css  */
+
+
+
+
+
+.card_header {
+    display: flex;
+    flex-direction: column;
+    align-items: left; /* Center the content and buttons vertically */
+}
