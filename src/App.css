@@ -319,3 +319,15 @@ body {
     color: #fff; 
   }
   
+
+  /* card detail page css  */
+
+
+
+
+
+.card_header {
+    display: flex;
+    flex-direction: column;
+    align-items: left; /* Center the content and buttons vertically */
+}
