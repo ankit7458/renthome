@@ -1,12 +1,15 @@
 import React from "react";
 import data from '../dummydata'
 import Roomcards from './Roomcards/Roomcards'
-import Footer from '../components/Footer'
+import Carousel from './carousel'
+// import Footer from './Footer'
 
 
 const Body = (props) => {
 
     return (
+        <div>
+        <Carousel />
         <div className="body-c">
             <div className="cards-section">
                 <div className="container">
@@ -14,7 +17,7 @@ const Body = (props) => {
                         {data.map(dataItem => (
                             <div className="col-sm">
                                 <Roomcards
-                                    key={dataItem.key}
+                                    id={dataItem.key}
                                     title={dataItem.title}
                                     img={dataItem.img}
                                     price={dataItem.price}
@@ -25,7 +28,8 @@ const Body = (props) => {
                     </div>
                 </div>
             </div>
-            <Footer />
+            {/* <Footer /> */}
+        </div>
         </div>
     )
 }

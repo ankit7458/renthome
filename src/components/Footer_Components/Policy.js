@@ -1,6 +1,6 @@
 // src/components/Aboutus.js
 // import React from "react";
-import Footer from './Footer';
+// import Footer from '../Footer';
 import React, { useEffect } from 'react'; //reload the page 
 
 function Policy() {
@@ -20,7 +20,7 @@ function Policy() {
                 </p>
             </div>
         </div>    
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

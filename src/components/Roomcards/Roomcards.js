@@ -14,7 +14,7 @@ function Roomcards(props) {
     return (
 
         <Card className="card-c card-shadow "  >
-            <Link to="/roomcards/carddeatail"><Card.Img className="image-container" variant="top" src={props.img} /></Link>
+            <Link to={`/Roomcards/Carddetail/${props.id}`}><Card.Img className="image-container" variant="top" src={props.img} /></Link>
             <Container>
 
                 <Row>

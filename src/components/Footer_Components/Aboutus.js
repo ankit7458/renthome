@@ -1,6 +1,6 @@
 // src/components/Aboutus.js
 // import React from "react";
-import Footer from './Footer';
+// import Footer from '../Footer_Components/Footer';
 import React, { useEffect } from 'react'; //reload the page 
 
 function Aboutus() {
@@ -38,7 +38,7 @@ function Aboutus() {
           </div>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

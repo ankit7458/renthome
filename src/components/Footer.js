@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from 'react-router-dom';
 
 
-const Footer = (props) => {
+const Footer = () => {
     return (
         <div className="footer">
             <footer className="text-center text-lg-start text-white">
@@ -34,14 +34,14 @@ const Footer = (props) => {
                                     <li><a href="#">Home</a></li>
                                     <li><a href="#">Contact Us</a></li>
                                     <li>
-                                        <Link to="/Feedback">Feedback</Link>
+                                        <Link to="/Footer_Components/Feedback">Feedback</Link>
                                     </li>
                                     <li>
-                                      <Link to="/Aboutus">About Us</Link>
+                                      <Link to="/Footer_Components/Aboutus">About Us</Link>
                                     </li>
                                     <li><a href="#">Terms and Conditions</a></li>
                                     <li>
-                                        <Link to="/Policy">Privacy Policy</Link>
+                                        <Link to="/Footer_Components/Policy">Privacy Policy</Link>
                                     </li>
                                 </ul>
                             </div>
