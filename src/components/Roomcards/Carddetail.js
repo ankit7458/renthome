@@ -14,7 +14,7 @@ import Image from 'react-bootstrap/Image';
 function Carddetail(props) {
     useEffect(() => {
         window.scrollTo(0, 0);
-      }, []);
+    }, []);
     const { cardkey } = useParams();
     const selectedCardData = data.find(item => item.key == cardkey);
     console.log('cardKey:', selectedCardData);
@@ -23,19 +23,18 @@ function Carddetail(props) {
         return <div>Card not found</div>;
     }
     return (
-        <div>
-            <Container className='card_deatail'>
+        <div className='card_detail_body'>
+            <Container className='card_detail'>
                 <Row className='card_header'>
-                    {/* 1st Part: Price and Room Details */}
-                    <Col md={8}>
+                    <Col>
                         <div className='header_deatils'>
                             <h2>{selectedCardData.title}</h2>
                             <p>Price: ${selectedCardData.price}</p>
                             <p>{selectedCardData.content}</p>
                         </div>
                     </Col>
-                    <Col className='header_button' md={4}>
-                        <div >
+                    <Col className='header_button' >
+                        <div className='header_button_detail' >
                             <Button>Overview</Button>
                             <Button>Dealer Details</Button>
                             <Button>Recommendations</Button>
@@ -47,7 +46,7 @@ function Carddetail(props) {
                     {/* 2nd Part: Room Photos and Additional Details */}
                     <Col md={6}>
                         {/* <img src={selectedCardData.img} alt={selectedCardData.title} /> */}
-                        <Image src={selectedCardData.img} thumbnail  />
+                        <Image src={selectedCardData.img} thumbnail />
                         {/* <i><Card.Img className="image-container" variant="top" src={selectedCardData.img} /></i> */}
                     </Col>
                     <Col className='card_deatails' md={6}>
