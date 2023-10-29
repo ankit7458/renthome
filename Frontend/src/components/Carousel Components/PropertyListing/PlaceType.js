@@ -20,11 +20,11 @@ function PlaceType() {
         {options.map((option, index) => (
           <Col key={index} xs={12} sm={6} md={3} lg={3}>
             <Card
-              className={`mb-3 ${selectedOption === option ? "selected" : ""}`}
+              className={`mb-3 ${selectedOption === option ? "selected bg-danger text-white hover-card" : "text-secondary hover-card"}`}
               onClick={() => handleCardClick(option)}
             >
               <Card.Body>
-                <Card.Title class="text-secondary">{option}</Card.Title>
+                <Card.Title>{option}</Card.Title>
               </Card.Body>
             </Card>
           </Col>

@@ -15,8 +15,8 @@ function AddressProperty() {
             </Form.Group>
           </Col>
           <Col>
-            <Form.Group className="mb-3" controlId="formBasicState">
-              <Form.Control type="text" placeholder="State" />
+            <Form.Group className="mb-3" controlId="formBasicHouseNumber">
+              <Form.Control type="text" placeholder="House Number" />
             </Form.Group>
           </Col>
         </Row>

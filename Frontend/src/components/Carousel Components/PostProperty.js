@@ -59,7 +59,7 @@ function PostProperty() {
             disabled={step === 6}
             onClick={nextStep}
           >
-            Next <i class="bi bi-arrow-right"></i>
+            Save <i class="bi bi-arrow-right"></i>
           </Button>
         </Col>
       </Row>

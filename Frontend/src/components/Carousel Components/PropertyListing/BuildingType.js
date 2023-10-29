@@ -40,7 +40,7 @@ const options = [
 
 function BuildingType() {
   const [selectedOption, setSelectedOption] = useState(null);
-
+  
   const handleCardClick = (option) => {
     setSelectedOption(option);
   };
@@ -53,7 +53,7 @@ function BuildingType() {
           <Col key={index} xs={12} sm={6} md={3} lg={3}>
             <Card
               className={`mb-3 ${
-                selectedOption === option ? "selected" : "text-secondary"
+                selectedOption === option ? "selected bg-danger text-white hover-card" : "text-secondary hover-card"
               }`}
               onClick={() => handleCardClick(option)}
             >

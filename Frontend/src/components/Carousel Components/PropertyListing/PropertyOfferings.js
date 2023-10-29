@@ -38,12 +38,18 @@ const options3 = [
   "Carbon monoxide alarm",
 ];
 
-function PropertyOfferings() {
-  const [selectedOption, setSelectedOption] = useState(null);
+function PropertyOfferings(option) {
+  const [selectedOptions, setSelectedOptions] = useState([]);
 
   const handleCardClick = (option) => {
-    setSelectedOption(option);
+    if (selectedOptions.includes(option)) {
+      setSelectedOptions(selectedOptions.filter((item) => item !== option));
+    } else {
+      setSelectedOptions([...selectedOptions, option]);
+    }
   };
+  //   setSelectedOption(option);
+  // };
 
   const [selectedOption2, setSelectedOption2] = useState(null);
 
@@ -58,14 +64,22 @@ function PropertyOfferings() {
   };
   return (
     <div>
-      <h3 className="d-flex justify-content-center mb-5">Tell guests what your place has to offer</h3>
+      <h3 className="d-flex justify-content-center mb-5">
+        Tell guests what your place has to offer
+      </h3>
       <Row>
         {options.map((option, index) => (
           <Col key={index} xs={12} sm={6} md={3} lg={3}>
             <Card
               className={`mb-3 ${
-                selectedOption === option ? "selected" : "text-secondary"
+                selectedOptions === option
+                  ? "selected bg-danger text-white hover-card"
+                  : "text-secondary hover-card"
               }`}
+              key={option}
+              option={option}
+              isSelected={selectedOptions.includes(option)} // Check if option is in selectedOptions
+              onCardClick={handleCardClick}
               onClick={() => handleCardClick(option)}
             >
               <Card.Body>
@@ -81,7 +95,9 @@ function PropertyOfferings() {
           <Col key={index} xs={12} sm={6} md={3} lg={3}>
             <Card
               className={`mb-3 ${
-                selectedOption2 === option2 ? "selected" : "text-secondary"
+                selectedOption2 === option2
+                  ? "selected bg-danger text-white hover-card"
+                  : "text-secondary hover-card"
               }`}
               onClick={() => handleCardClick2(option2)}
             >
@@ -98,7 +114,9 @@ function PropertyOfferings() {
           <Col key={index} xs={12} sm={6} md={3} lg={3}>
             <Card
               className={`mb-3 ${
-                selectedOption3 === option3 ? "selected" : "text-secondary"
+                selectedOption3 === option3
+                  ? "selected bg-danger text-white hover-card"
+                  : "text-secondary hover-card"
               }`}
               onClick={() => handleCardClick2(option3)}
             >
