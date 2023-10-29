@@ -9,6 +9,7 @@ import Policy from './components/Policy';//Import the policy componetnt
 import Carddeatail from './components/Roomcards/carddeatail';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Update the import
 import Feedback from './components/Feedback';
+import PostProperty from './components/Carousel Components/PostProperty';
 
 function App() {
   return (
@@ -21,7 +22,10 @@ function App() {
           <Route path="/" element={<Body />} />
           <Route path ="/Policy"element = {<Policy />}/> 
           <Route path ="/Feedback"element = {<Feedback />}/> 
-
+          <Route path ="/PostProperty"element = {<PostProperty />}> 
+            {/* <Route path ="/PostPropertyHome"element = {<PostPropertyHome />}/> 
+            <Route path ="/UploadPictures"element = {<UploadPictures />}/>  */}
+          </Route>
           <Route path="/roomcards/carddeatail" element={<Carddeatail />} />
 
         </Routes>
