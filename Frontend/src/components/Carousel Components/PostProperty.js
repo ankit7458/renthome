@@ -43,6 +43,7 @@ function PostProperty() {
 
   return (
     <div className="container mt-3 mb-3">
+      <h1>Page is working</h1>
       {/* <div className="d-flex justify-content-center mb-3"></div>
       {renderStep()} */}
       <Row className="mt-4">

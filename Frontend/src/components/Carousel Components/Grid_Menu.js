@@ -4,7 +4,6 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import Search_Rental_Property from "./Search_Rental_Property";
-import PostProperty from "./PostProperty";
 import { Link } from "react-router-dom";
 
 function Grid_Menu() {

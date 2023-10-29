@@ -10,24 +10,20 @@ import Carddeatail from './components/Roomcards/carddeatail';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Update the import
 import Feedback from './components/Feedback';
 import PostProperty from './components/Carousel Components/PostProperty';
+import Grid_Menu from '../Frontend/src/components/Carousel Components/Grid_Menu';
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Navbar />
-        <Carousel />
         <Routes>
           <Route path="/Aboutus" element={<Aboutus />} /> {/* Render the Aboutus component for the "/aboutus" route */}
           <Route path="/" element={<Body />} />
           <Route path ="/Policy"element = {<Policy />}/> 
           <Route path ="/Feedback"element = {<Feedback />}/> 
-          <Route path ="/PostProperty"element = {<PostProperty />}> 
-            {/* <Route path ="/PostPropertyHome"element = {<PostPropertyHome />}/> 
-            <Route path ="/UploadPictures"element = {<UploadPictures />}/>  */}
-          </Route>
-          <Route path="/roomcards/carddeatail" element={<Carddeatail />} />
-
+          <Route path ="/PostProperty"element = {<PostProperty />}/>
+          <Route path="/roomcards/carddeatail" element={<Carddeatail />}/>
         </Routes>
       </div>
     </Router>
