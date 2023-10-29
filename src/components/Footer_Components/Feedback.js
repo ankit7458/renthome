@@ -43,35 +43,34 @@ function Feedback() {
   return (
     <div>
 
-        <div className="about">
-            <div className="heading">
-                <h1>Feedback</h1>
-            </div>
-        <Form>
-            <Form.Group className="mb-3">
-            <Form.Label>Description</Form.Label>
+      <div className="about p-4 pb-0">
+        <div className="heading">
+          <h1>Feedback</h1>
+        </div>
+        <Form className="Feedback-form">
+          <Form.Group className="mb-3">
+            <Form.Label className="description">Description</Form.Label>
             <Form.Control as="textarea" value={feedback} placeholder="Enter your feedback" rows={3} onChange={handleFeedbackChange} />
-            </Form.Group>
-            <dev className ="feedback_button">
+          </Form.Group>
+          <dev className="feedback_button">
             <Button variant="danger" onClick={handleClose}>
-            Close
+              Close
             </Button>
             <Button variant="primary" onClick={handleFeedbackSubmit}>
-            Submit
+              Submit
             </Button>
-            </dev>
+          </dev>
         </Form>
 
         <Modal show={showThankYou} onHide={handleClose}>
-            <Modal.Header closeButton>
+          <Modal.Header closeButton>
             <Modal.Title>Thank You</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
+          </Modal.Header>
+          <Modal.Body>
             <p>Thank you for your feedback!</p>
-            </Modal.Body>
+          </Modal.Body>
         </Modal>
-        </div>
-    {/* <Footer /> */}
+      </div>
     </div>
   );
 }

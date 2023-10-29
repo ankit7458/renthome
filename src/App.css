@@ -240,9 +240,8 @@ body {
 
 
 .about {
-    padding: 0 120px;
-    margin-top: 20px;
-    /* text-align: center; */
+    margin-top: 7rem;
+    align-items: center;
 }
 
 .heading h1 {
@@ -252,106 +251,251 @@ body {
 }
 
 .about_body {
-
-    text-align: left;
+    padding-top: 40px;
+    display: flex;
+    position: relative;
 }
 
+.about_intro{
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.about_contect{
+    padding-top: 10px;
+    align-items: center;
+}
 
 /* Feedback component styles */
 
-  textarea {
+
+.Feedback-form{
+    margin: 0 110px;
+}
+
+.description{
+    font-weight: 500;
+    font-size: 20px;
+}
+textarea {
     width: 100%;
     padding: 0 100px;
     margin-bottom: 20px;
-  }
-  
-  .modal-dialog {
+}
+
+.modal-dialog {
     max-width: 400px;
-  }
-  
-  /* Thank You modal styles */
-  .thank-you-message p {
+}
+
+/* Thank You modal styles */
+.thank-you-message p {
     font-size: 18px;
     text-align: center;
     padding: 20px;
     background-color: #4CAF50;
     color: #fff;
-  }
-  
-  .modal-content {
+}
+
+.modal-content {
     border: none;
     border-radius: 10px;
-  }
-  
-  .modal-header {
-    border-bottom: none;
-  }
-  
-  .modal-title {
-    font-size: 24px;
-  }
+}
 
- /* CSS to style the buttons */
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-title {
+    font-size: 24px;
+}
+
 .feedback_button {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px; 
+    margin-top: 20px;
     margin-bottom: 20px;
-  }
-  
-  .feedback_button button {
-    margin: 0 10px; 
-    padding: 10px 20px; 
-    font-size: 16px; 
+}
+
+.feedback_button button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 16px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  .feedback_button button.variant-danger {
-    background-color: #dc3545; 
-    color: #fff; 
-  }
-  
-  .feedback_button button.variant-primary {
-    background-color: #007bff; 
-    color: #fff; 
-  }
-  
+}
 
-  /* card detail page css  */
+.feedback_button button.variant-danger {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.feedback_button button.variant-primary {
+    background-color: #007bff;
+    color: #fff;
+}
 
 
+/* ---------------------------------Carddetail page css------------------  */
 
-.card_detail_body{
-    margin-top:  7rem;
+
+
+.card_detail_body {
+    margin-top: 7rem;
 }
 
 .card_header {
     display: flex;
-    flex-direction: column;
-    align-items: left; /* Center the content and buttons vertically */
-}
-.header_deatils{
-    background: rgb(141, 85, 85);
-    display: flex;
+    flex-wrap: wrap;
+    /* Flex items ko wrap karega agar space kam ho */
+    justify-content: space-between;
+    /* Items ke beech space evenly distribute karega */
     align-items: center;
-    /* flex-direction: column; */
-}
-.header_deatils h2{
-    flex-direction: right;
-    font-size: 50px;
-    font-weight: 600;
-}
-.header_deatils p{
-    flex-direction: right;
+    width: 100%;
+    ;
+
 }
 
-.header_button_detail button{
-    background-color: rgb(255, 255, 255);
-    color: #007bff;
-    margin-right: 10px;
-    font-size: 16px;
+
+.header_deatils {
+    display: flex;
+    align-items: center;
+}
+
+.price {
+    margin-bottom: 10px;
+    justify-content: left;
+}
+
+.price h2 {
     font-weight: 600;
+    font-size: 50px;
+
+}
+
+
+
+.other_detail {
+    padding: 10px;
+    position: relative;
+    left: 100px;
+    border: 10cm;
+    border-left: 1px solid #000;
+    padding-right: 30px;
+    border-radius: 5px;
+    width: 40%;
+}
+
+.other_detail h4 {
+    font-weight: 600;
+    font-size: 30px;
+}
+
+/* ------------------Dream list button css ------ */
+
+.book-button {
+    position: relative;
+    padding: 30px;
+    width: 20%;
+    align-items: center;
+    justify-content: flex-end;
+    left: 30%;
+}
+
+.book-button button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card_contact_button {
+    margin-bottom: 15px;
+    width: 98px;
+}
+
+/* ----------------------------card details button css ------------ */
+
+.header_button {
+    /* margin-top: 100px; */
+    display: flex;
+    width: 100%;
+    left: 0;
+    padding: 30px;
+}
+
+.header_button button {
+    margin: 10px 0;
+    margin-right: 10px;
+    padding-right: 10px;
+
+}
+
+
+/* -----------card image -----------------*/
+
+.card_img {
+    /* background: #5b5a5a; */
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.cardimage {
+    width: 350px;
+    height: 150px;
+}
+
+.card_deatails {
+    /* background: #874646b8; */
+    padding: 10px;
+    position: relative;
+    left: -50px;
+}
+
+.card_deatails p {
+    font-size: 20px;
+}
+
+
+/* -------------Dealer part css in card detail page ---------- */
+
+.dealer {
+    /* padding-top: 50px; */
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.dealer h2 {
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.dealerimage {
+    width: 220px;
+    height: 150px;
+}
+
+.dealer_deatails {
+    padding: 10px;
+    position: relative;
+    left: -10rem;
+}
+
+.dealer_deatails h2 {
+    font-size: 20px;
+    padding-bottom: 30px;
+}
+
+.dealer_deatails p {
+    font-size: 15px;
+}
+
+
+/* -------------similar part css in card detail page ---------- */
+
+.similar h2 {
+    padding-top: 50px;
+    padding-bottom: 30px;
 }
