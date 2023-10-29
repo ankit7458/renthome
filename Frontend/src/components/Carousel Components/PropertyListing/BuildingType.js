@@ -5,6 +5,9 @@ import Col from "react-bootstrap/Col";
 import { useState } from "react";
 
 const options = [
+  "House",
+  "Flat",
+  "Hotel",
   "Barn",
   "Bed & Breakfast",
   "Boat",
@@ -20,7 +23,6 @@ const options = [
   "Earth Home",
   "Farm",
   "Guest house",
-  "Hotel",
   "HouseBoat",
   "Kezhan",
   "Minsu",
@@ -45,12 +47,14 @@ function BuildingType() {
 
   return (
     <div>
-      <h3 className="mb-5">Which of these best describes your place?</h3>
+      <h3 className="d-flex justify-content-center mb-5">Which of these best describes your place?</h3>
       <Row>
         {options.map((option, index) => (
           <Col key={index} xs={12} sm={6} md={3} lg={3}>
             <Card
-              className={`mb-3 ${selectedOption === option ? "selected" : "text-secondary"}`}
+              className={`mb-3 ${
+                selectedOption === option ? "selected" : "text-secondary"
+              }`}
               onClick={() => handleCardClick(option)}
             >
               <Card.Body>

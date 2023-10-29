@@ -15,7 +15,7 @@ function PlaceType() {
   };
   return (
     <div>
-      <h2 className="mb-5">What type of place will guests have?</h2>
+      <h3 className="d-flex justify-content-center mb-5">What type of place will guests have?</h3>
       <Row>
         {options.map((option, index) => (
           <Col key={index} xs={12} sm={6} md={3} lg={3}>

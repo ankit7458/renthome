@@ -16,7 +16,8 @@ function BasicsOfPlace() {
 
   return (
     <div>
-      <Container>
+      <Container className="mb-3">
+      <h3 className="d-flex justify-content-center mb-5">Tell guests what your place has to offer</h3>
         <Row>
           <Col xs={6}>
             <p>Guestroom</p>

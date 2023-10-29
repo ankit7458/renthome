@@ -58,7 +58,7 @@ function PropertyOfferings() {
   };
   return (
     <div>
-      <h3 className="mb-3 mt-4">Which of these best describes your place?</h3>
+      <h3 className="d-flex justify-content-center mb-5">Tell guests what your place has to offer</h3>
       <Row>
         {options.map((option, index) => (
           <Col key={index} xs={12} sm={6} md={3} lg={3}>

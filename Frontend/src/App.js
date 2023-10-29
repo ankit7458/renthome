@@ -10,6 +10,7 @@ import Carddeatail from './components/Roomcards/Carddetail';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Update the import
 import Feedback from './components/Footer_Components/Feedback';
 import Footer from './components/Footer';
+import PostProperty from './components/Carousel Components/PostProperty';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/Footer_Components/Feedback" element={<Feedback />} />
           {/* <Route path ="/Footer_Components/Footer"element = {<Feedback />}/> */}
           <Route path="/Roomcards/Carddetail/:cardkey" element={<Carddeatail />} />
+          <Route path="/PostProperty" element={<PostProperty />} />
 
         </Routes>
         <Footer />

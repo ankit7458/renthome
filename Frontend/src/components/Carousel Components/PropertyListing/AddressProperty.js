@@ -15,43 +15,43 @@ function AddressProperty() {
             </Form.Group>
           </Col>
           <Col>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Group className="mb-3" controlId="formBasicState">
               <Form.Control type="text" placeholder="State" />
             </Form.Group>
           </Col>
         </Row>
         <Row>
           <Col>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Group className="mb-3" controlId="formBasicCity">
               <Form.Control type="text" placeholder="City/Town" />
             </Form.Group>
           </Col>
           <Col>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Group className="mb-3" controlId="formBasicArea">
               <Form.Control type="text" placeholder="Area" />
             </Form.Group>
           </Col>
         </Row>
         <Row>
           <Col>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Group className="mb-3" controlId="formBasicStreetAddress">
               <Form.Control type="text" placeholder="Street Address" />
             </Form.Group>
           </Col>
           <Col>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Group className="mb-3" controlId="formBasicLandmark">
               <Form.Control type="text" placeholder="Nearby Landmark" />
             </Form.Group>
           </Col>
         </Row>
         <Row>
           <Col>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Group className="mb-3" controlId="formBasicState">
               <Form.Control type="text" placeholder="State" />
             </Form.Group>
           </Col>
           <Col>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Group className="mb-3" controlId="formBasicPincode">
               <Form.Control type="number" placeholder="Pincode" />
             </Form.Group>
           </Col>

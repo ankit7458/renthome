@@ -9,6 +9,7 @@ import AddressProperty from "./PropertyListing/AddressProperty";
 import BasicsOfPlace from "./PropertyListing/BasicsOfPlace";
 import UploadPictures from "./PropertyListing/UploadPictures";
 import PropertyOfferings from "./PropertyListing/PropertyOfferings";
+import "./PostProperty.css";
 
 function PostProperty() {
   const [show, setShow] = useState(false);
@@ -42,14 +43,13 @@ function PostProperty() {
   };
 
   return (
-    <div className="container mt-3 mb-3">
-      <h1>Page is working</h1>
+    <div className="container postProperty">
       {/* <div className="d-flex justify-content-center mb-3"></div>
       {renderStep()} */}
       <Row className="mt-4">
         <Col className="d-flex justify-content-start">
           <Button disabled={step === 1} variant="danger" onClick={prevStep}>
-            Back
+          <i class="bi bi-arrow-left"></i> Back
           </Button>
         </Col>
         <Col className="d-flex justify-content-end">
@@ -59,7 +59,7 @@ function PostProperty() {
             disabled={step === 6}
             onClick={nextStep}
           >
-            Next
+            Next <i class="bi bi-arrow-right"></i>
           </Button>
         </Col>
       </Row>
