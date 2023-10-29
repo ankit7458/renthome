@@ -85,6 +85,37 @@ body {
     z-index: 2;
 }
 
+.User-dropdown{
+    width: 8rem;
+    text-align: center;
+}
+
+.dropdown-basic-button{
+    background-color: red;
+}
+
+/* #drop-item {
+    color:red;
+} */
+
+/* --------------your Profile section-------- */
+
+.profile-body {
+    margin: 7rem 4rem 7rem 4rem;
+}
+
+.profile-card{
+    height: 20rem;
+    box-shadow: 2px 5px 5px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: flex;
+    transition: box-shadow 0.1s ease-in-out;
+}
+
+.profile-pic{
+    height: 20rem;
+} */
+
 
 
 /* *----------Body code will be write here------------------* */

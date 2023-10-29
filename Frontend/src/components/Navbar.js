@@ -7,6 +7,7 @@ import Form from "react-bootstrap/Form";
 import Image from "react-bootstrap/Image";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import InputGroup from "react-bootstrap/InputGroup";
+import LoginMenu from "./Navbar_Components/LoginMenu";
 
 function MyNavbar() {
   return (
@@ -49,7 +50,8 @@ function MyNavbar() {
           &nbsp;
           <div className="d-flex flex-row-reverse">
             <div>
-              <LoginButton />
+              {/* <LoginButton /> */}
+              <LoginMenu />
             </div>
           </div>
         </Navbar.Collapse>
