@@ -13,8 +13,8 @@ function YourProfile() {
                 <Row>
                     <Col>
                         <Card className="profile-card">
-                            <Card.Img variant="top" src="https://img.freepik.com/premium-vector/anonymous-user-circle-icon-vector-illustration-flat-style-with-long-shadow_520826-1931.jpg" />
                             <Card.Body>
+                                <Card.Img variant="top" src="https://img.freepik.com/premium-vector/anonymous-user-circle-icon-vector-illustration-flat-style-with-long-shadow_520826-1931.jpg" />
                                 <Card.Title>abhay.cni99@gmail.com</Card.Title>    
                             </Card.Body>
                         </Card>
@@ -42,6 +42,7 @@ function YourProfile() {
                             <Card.Body>
                                 <Card.Title>Special title treatment</Card.Title>
                                 <Card.Text>
+                                    With supporting text below as a natural lead-in to additional content.
                                     With supporting text below as a natural lead-in to additional content.
                                     With supporting text below as a natural lead-in to additional content.
                                 </Card.Text>
