@@ -4,12 +4,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './components/Navbar';
 import Carousel from './components/carousel';
 import Body from './components/Body';
-import Aboutus from './components/Footer_Components/Aboutus'; // Import the AboutUs component
-import Policy from './components/Footer_Components/Policy';//Import the policy componetnt
-import Carddeatail from './components/Roomcards/Carddetail';
+import Aboutus from './components/Aboutus'; // Import the AboutUs component
+import Policy from './components/Policy';//Import the policy componetnt
+import Carddeatail from './components/Roomcards/carddeatail';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Update the import
-import Feedback from './components/Footer_Components/Feedback';
-import Footer from './components/Footer';
+import Feedback from './components/Feedback';
+import PostProperty from './components/Carousel Components/PostProperty';
+import Grid_Menu from '../Frontend/src/components/Carousel Components/Grid_Menu';
 
 function App() {
   return (
@@ -17,15 +18,13 @@ function App() {
       <div className="App">
         <Navbar />
         <Routes>
-          <Route path="/Footer_Components/Aboutus" element={<Aboutus />} /> {/* Render the Aboutus component for the "/aboutus" route */}
+          <Route path="/Aboutus" element={<Aboutus />} /> {/* Render the Aboutus component for the "/aboutus" route */}
           <Route path="/" element={<Body />} />
-          <Route path="/Footer_Components/Policy" element={<Policy />} />
-          <Route path="/Footer_Components/Feedback" element={<Feedback />} />
-          {/* <Route path ="/Footer_Components/Footer"element = {<Feedback />}/> */}
-          <Route path="/Roomcards/Carddetail/:cardkey" element={<Carddeatail />} />
-
+          <Route path ="/Policy"element = {<Policy />}/> 
+          <Route path ="/Feedback"element = {<Feedback />}/> 
+          <Route path ="/PostProperty"element = {<PostProperty />}/>
+          <Route path="/roomcards/carddeatail" element={<Carddeatail />}/>
         </Routes>
-        <Footer />
       </div>
     </Router>
   );
