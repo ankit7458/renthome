@@ -1,10 +1,10 @@
 import React from "react";
-import Rent_Property_Menu from "./Rent_Property_Menu";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import Search_Rental_Property from "./Search_Rental_Property";
+import { Link } from "react-router-dom";
 
 function Grid_Menu() {
   return (
@@ -14,7 +14,11 @@ function Grid_Menu() {
         <Row xs={4} md={4} lg={4}>
           <Col>
             <div class="d-flex justify-content-center">
-              <Rent_Property_Menu />
+              {/* <Rent_Property_Menu /> */}
+
+              <Button variant="success" as={Link} to="/PostProperty">
+                  <i class="bi bi-file-earmark-plus"> Property</i>
+              </Button>
             </div>
           </Col>
           <Col>
