@@ -25,7 +25,6 @@ function App() {
           {/* <Route path ="/Footer_Components/Footer"element = {<Feedback />}/> */}
           <Route path="/Roomcards/Carddetail/:cardkey" element={<Carddeatail />} />
           <Route path="/PostProperty" element={<PostProperty />} />
-
         </Routes>
         <Footer />
       </div>
