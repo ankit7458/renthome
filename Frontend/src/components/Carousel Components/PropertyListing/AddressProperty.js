@@ -7,7 +7,7 @@ function AddressProperty() {
   return (
     <div>
         <h3 class="d-flex justify-content-center mb-4">Address</h3>
-      <Form>
+      <Form className="shadow p-5">
         <Row>
           <Col>
             <Form.Group className="mb-3" controlId="formBasicEmail">

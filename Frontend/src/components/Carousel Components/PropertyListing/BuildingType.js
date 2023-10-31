@@ -8,34 +8,7 @@ const options = [
   "House",
   "Flat",
   "Hotel",
-  "Barn",
-  "Bed & Breakfast",
-  "Boat",
-  "Cabin",
-  "Campervan/MoterHome",
-  "Casa Particular",
-  "Castle",
-  "Cave",
-  "Container",
-  "Cycladic home",
-  "Dammuso",
-  "Dome",
-  "Earth Home",
-  "Farm",
-  "Guest house",
-  "HouseBoat",
-  "Kezhan",
-  "Minsu",
-  "Riad",
-  "Ryokan",
-  "Shepherd's hut",
-  "Tent",
-  "Tiny home",
-  "Tower",
-  "Tree house",
-  "Trullo",
-  "Windmill",
-  "Yurt",
+  "Rooms"
 ];
 
 function BuildingType() {
@@ -45,15 +18,18 @@ function BuildingType() {
     setSelectedOption(option);
   };
 
+  const selectedCardCSS="shadow text-secondary hover-card";
+  const unSelectedCardCSS = " shadow selected bg-danger text-white hover-card";
+
   return (
     <div>
-      <h3 className="d-flex justify-content-center mb-5">Which of these best describes your place?</h3>
+      <h3 className="d-flex justify-content-center mb-5">Select your Property</h3>
       <Row>
         {options.map((option, index) => (
           <Col key={index} xs={12} sm={6} md={3} lg={3}>
             <Card
               className={`mb-3 ${
-                selectedOption === option ? "selected bg-danger text-white hover-card" : "text-secondary hover-card"
+                selectedOption === option ? unSelectedCardCSS : selectedCardCSS
               }`}
               onClick={() => handleCardClick(option)}
             >
