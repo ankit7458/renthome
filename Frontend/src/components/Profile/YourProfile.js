@@ -12,15 +12,18 @@ function YourProfile() {
             <Container>
                 <Row>
                     <Col>
-                        <Card className="profile-card">
-                            <Card.Body>
-                                <Card.Img variant="top" src="https://img.freepik.com/premium-vector/anonymous-user-circle-icon-vector-illustration-flat-style-with-long-shadow_520826-1931.jpg" />
+                    <div className="profile-card">
+                        <Card>
+                            <Card.Body>      
+                                {/* <Card.Img variant="top" src="https://img.freepik.com/premium-vector/anonymous-user-circle-icon-vector-illustration-flat-style-with-long-shadow_520826-1931.jpg" /> */}
                                 <Card.Title>abhay.cni99@gmail.com</Card.Title>    
                             </Card.Body>
                         </Card>
+                        </div>
                     </Col>
                     <Col xs={9}>
-                        <Card className="profile-card">
+                    <div className="profile-card">
+                        <Card >
                             <Card.Header>
                                 <Nav variant="tabs" defaultActiveKey="#first">
                                     <Nav.Item>
@@ -45,10 +48,14 @@ function YourProfile() {
                                     With supporting text below as a natural lead-in to additional content.
                                     With supporting text below as a natural lead-in to additional content.
                                     With supporting text below as a natural lead-in to additional content.
+                                    With supporting text below as a natural lead-in to additional content.
+                                    With supporting text below as a natural lead-in to additional content.
+                                    With supporting text below as a natural lead-in to additional content.
                                 </Card.Text>
                                 <Button variant="primary">Go somewhere</Button>
                             </Card.Body>
                         </Card>
+                        </div>
                     </Col>
                 </Row>
                 <Row>

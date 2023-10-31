@@ -101,11 +101,11 @@ body {
 /* --------------your Profile section-------- */
 
 .profile-body {
-    margin: 7rem 4rem 7rem 4rem;
+    margin: 5rem 4rem 7rem 4rem;
 }
 
 .profile-card{
-    height: 20rem;
+    height: 30rem;
     box-shadow: 2px 5px 5px 5px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     display: flex;
