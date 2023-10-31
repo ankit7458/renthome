@@ -5,30 +5,45 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom'; // Use useNavigate
+
 import data from '../../dummydata';
 import Image from 'react-bootstrap/Image';
 import { Link } from 'react-router-dom';
 
 
 
+
 function Carddetail(props) {
+    // Use useEffect to scroll to the top of the page when the component mounts
     useEffect(() => {
-        window.scrollTo(0, 0);
+        document.body.scrollIntoView({ behavior: 'smooth' });
     }, []);
+
+    // Initialize navigate hook to programmatically navigate to other pages
+    const navigate = useNavigate();
+
+    // Extract cardkey from the route parameters
     const { cardkey } = useParams();
+
+    // Find the selected card's data based on the cardkey
     const selectedCardData = data.find(item => item.key == cardkey);
     const currentPrice = selectedCardData.price;
 
-    console.log(currentPrice);
+    // Define the price range to filter similar properties
+    const priceRange = 3000;
 
-    const priceRange = 3000; // Define the price range (adjust as needed)
-
+    // Filter similar properties based on price difference
     const similarProperties = data.filter(item => {
         const priceDifference = Math.abs(item.price - currentPrice);
         return priceDifference <= priceRange && item.key !== selectedCardData.key;
     });
 
+    // Function to handle click on similar property cards and navigate
+    const handleSimilarCardClick = (propertyKey) => {
+        navigate(`/Roomcards/Carddetail/${propertyKey}`);
+        document.body.scrollIntoView({ behavior: 'smooth' });
+    };
 
     return (
         <div className='card_detail_body'>
@@ -97,27 +112,28 @@ function Carddetail(props) {
                     <h2>Similar Properties</h2>
                     <Row>
                         {similarProperties.map(property => (
-                            <Col id={property.key}>
-
-                                <Card className="card-c card-shadow "  >
-                                    {/* <Image src={property.img} alt={property.title} thumbnail /> */}
-                                    <Link to={`/Roomcards/Carddetail/${props.id}`}><Card.Img className="image-container" variant="top" src={property.img} /></Link>
-                                    <Container>
-
-                                        <Row>
-                                            <Col className="price-back">
-                                                <p>${property.price}</p>
-                                            </Col>
-                                        </Row>
-                                    </Container>
-                                    <Card.Body>
-                                        <Card.Text>
-                                            <p className="card-title">{property.title}</p>
-                                            {property.content}
-                                        </Card.Text>
-
-                                    </Card.Body>
-                                </Card>
+                            <Col>
+                                <div
+                                    onClick={() => handleSimilarCardClick(property.key)}
+                                    style={{ cursor: 'pointer' }}
+                                >
+                                    <Card className="card-c card-shadow">
+                                        <Card.Img className="image-container" variant="top" src={property.img} />
+                                        <Container>
+                                            <Row>
+                                                <Col className="price-back">
+                                                    <p>${property.price}</p>
+                                                </Col>
+                                            </Row>
+                                        </Container>
+                                        <Card.Body>
+                                            <Card.Text>
+                                                <p className="card-title">{property.title}</p>
+                                                {property.content}
+                                            </Card.Text>
+                                        </Card.Body>
+                                    </Card>
+                                </div>
                             </Col>
                         ))}
                     </Row>
