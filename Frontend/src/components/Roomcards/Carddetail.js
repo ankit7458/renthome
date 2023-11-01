@@ -1,4 +1,3 @@
-// import React from 'react';
 import { useEffect } from 'react'; //reload the page 
 import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
@@ -15,6 +14,8 @@ import { Link } from 'react-router-dom';
 
 
 function Carddetail(props) {
+
+
     // Use useEffect to scroll to the top of the page when the component mounts
     useEffect(() => {
         document.body.scrollIntoView({ behavior: 'smooth' });
@@ -45,6 +46,7 @@ function Carddetail(props) {
         document.body.scrollIntoView({ behavior: 'smooth' });
     };
 
+
     return (
         <div className='card_detail_body'>
             <Container className='card_detail'>
@@ -72,16 +74,36 @@ function Carddetail(props) {
                 </Row>
 
                 <Row>
-                    <Col className='header_button'>
+                    <Col className="header_button" >
                         <div className='header_button_detail'>
-                            <Button variant="outline-success">Overview</Button>
-                            <Button variant="outline-success">Dealer Details</Button>
-                            <Button variant="outline-success">Recommendations</Button>
+                            <Button variant="outline-success"
+                                onClick={() => {
+                                    const OverviewSection = document.getElementById("overview-details");
+                                    if (OverviewSection) {
+                                        OverviewSection.scrollIntoView({ behavior: 'smooth' });
+                                    }
+                                }}>Overview</Button>
+                            <Button
+                                variant="outline-success"
+                                onClick={() => {
+                                    const dealerDetailsSection = document.getElementById("dealer-details");
+                                    if (dealerDetailsSection) {
+                                        dealerDetailsSection.scrollIntoView({ behavior: 'smooth' });
+                                    }
+                                }}>Dealer Details</Button>
+                            <Button
+                                variant="outline-success"
+                                onClick={() => {
+                                    const SimilarSection = document.getElementById("similar-details");
+                                    if (SimilarSection) {
+                                        SimilarSection.scrollIntoView({ behavior: 'smooth' });
+                                    }
+                                }}>Recommendations</Button>
                         </div>
                     </Col>
                 </Row>
 
-                <Row className='card_img'>
+                <Row className='card_img' id='overview-details'>
                     <Col>
                         <Image src={selectedCardData.img} thumbnail className='cardimage' />
                     </Col>
@@ -93,8 +115,7 @@ function Carddetail(props) {
                         </div>
                     </Col>
                 </Row>
-
-                <Row className='dealer'>
+                <Row className='dealer' id="dealer-details">
                     <h2>Dealer Details</h2>
                     <Col>
                         <Image src={selectedCardData.img} thumbnail className='dealerimage' />
@@ -108,7 +129,7 @@ function Carddetail(props) {
                     </Col>
                 </Row>
 
-                <div className='similar'>
+                <div className='similar' id='similar-details'>
                     <h2>Similar Properties</h2>
                     <Row>
                         {similarProperties.map(property => (
