@@ -5,11 +5,10 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import { useParams, useNavigate } from 'react-router-dom'; // Use useNavigate
-
 import data from '../../dummydata';
 import Image from 'react-bootstrap/Image';
 import { Link } from 'react-router-dom';
-
+import Footer from '../Footer';
 
 
 
@@ -38,6 +37,7 @@ function Carddetail(props) {
     const similarProperties = data.filter(item => {
         const priceDifference = Math.abs(item.price - currentPrice);
         return priceDifference <= priceRange && item.key !== selectedCardData.key;
+
     });
 
     // Function to handle click on similar property cards and navigate
@@ -48,92 +48,92 @@ function Carddetail(props) {
 
 
     return (
-        <div className='card_detail_body'>
-            <Container className='card_detail'>
-                <Row className='card_header'>
-                    <Col>
-                        <div className='header_deatils'>
-                            <div className="price">
-                                <h2>${selectedCardData.price}</h2>
-                                <p>Per Month</p>
-                            </div>
-                            <div className="other_detail">
-                                <div>
-                                    <h4>{selectedCardData.title}</h4>
-                                    <p>{selectedCardData.content}</p>
+        <dev>
+            <div className='card_detail_body'>
+                <Container className='card_detail'>
+                    <Row className='card_header'>
+                        <Col>
+                            <div className='header_deatils'>
+                                <div className="price">
+                                    <h2>${selectedCardData.price}</h2>
+                                    <p>Per Month</p>
+                                </div>
+                                <div className="other_detail">
+                                    <div>
+                                        <h4>{selectedCardData.title}</h4>
+                                        <p>{selectedCardData.content}</p>
+                                    </div>
+                                </div>
+                                <div className="book-button">
+                                    <div>
+                                        <Button className="card_contact_button" variant="outline-success">Contact</Button>
+                                        <Button className="card_dream_button" variant="outline-success">Dream List</Button>
+                                    </div>
                                 </div>
                             </div>
-                            <div className="book-button">
-                                <div>
-                                    <Button className="card_contact_button" variant="outline-success">Contact</Button>
-                                    <Button className="card_dream_button" variant="outline-success">Dream List</Button>
-                                </div>
-                            </div>
-                        </div>
-                    </Col>
-                </Row>
+                        </Col>
+                    </Row>
 
-                <Row>
-                    <Col className="header_button" >
-                        <div className='header_button_detail'>
-                            <Button variant="outline-success"
-                                onClick={() => {
-                                    const OverviewSection = document.getElementById("overview-details");
-                                    if (OverviewSection) {
-                                        OverviewSection.scrollIntoView({ behavior: 'smooth' });
-                                    }
-                                }}>Overview</Button>
-                            <Button
-                                variant="outline-success"
-                                onClick={() => {
-                                    const dealerDetailsSection = document.getElementById("dealer-details");
-                                    if (dealerDetailsSection) {
-                                        dealerDetailsSection.scrollIntoView({ behavior: 'smooth' });
-                                    }
-                                }}>Dealer Details</Button>
-                            <Button
-                                variant="outline-success"
-                                onClick={() => {
-                                    const SimilarSection = document.getElementById("similar-details");
-                                    if (SimilarSection) {
-                                        SimilarSection.scrollIntoView({ behavior: 'smooth' });
-                                    }
-                                }}>Recommendations</Button>
-                        </div>
-                    </Col>
-                </Row>
-
-                <Row className='card_img' id='overview-details'>
-                    <Col>
-                        <Image src={selectedCardData.img} thumbnail className='cardimage' />
-                    </Col>
-                    <Col className='card_deatails' md={6}>
-                        <div>
-                            <p>Size: 1200 sq. ft.</p>
-                            <p>Furnished: Yes</p>
-                            <p>Location: City, State</p>
-                        </div>
-                    </Col>
-                </Row>
-                <Row className='dealer' id="dealer-details">
-                    <h2>Dealer Details</h2>
-                    <Col>
-                        <Image src={selectedCardData.img} thumbnail className='dealerimage' />
-                    </Col>
-                    <Col className='dealer_deatails' md={6}>
-                        <div>
-                            <p>Name: John Doe</p>
-                            <p>Contact: john.doe@example.com</p>
-                            <p>Phone: +1234567890</p>
-                        </div>
-                    </Col>
-                </Row>
-
-                <div className='similar' id='similar-details'>
-                    <h2>Similar Properties</h2>
                     <Row>
-                        {similarProperties.map(property => (
-                            <Col>
+                        <Col className="header_button" >
+                            <div className='header_button_detail'>
+                                <Button variant="outline-success"
+                                    onClick={() => {
+                                        const OverviewSection = document.getElementById("overview-details");
+                                        if (OverviewSection) {
+                                            OverviewSection.scrollIntoView({ behavior: 'smooth' });
+                                        }
+                                    }}>Overview</Button>
+                                <Button
+                                    variant="outline-success"
+                                    onClick={() => {
+                                        const dealerDetailsSection = document.getElementById("dealer-details");
+                                        if (dealerDetailsSection) {
+                                            dealerDetailsSection.scrollIntoView({ behavior: 'smooth' });
+                                        }
+                                    }}>Dealer Details</Button>
+                                <Button
+                                    variant="outline-success"
+                                    onClick={() => {
+                                        const SimilarSection = document.getElementById("similar-details");
+                                        if (SimilarSection) {
+                                            SimilarSection.scrollIntoView({ behavior: 'smooth' });
+                                        }
+                                    }}>Recommendations</Button>
+                            </div>
+                        </Col>
+                    </Row>
+
+                    <Row className='card_img' id='overview-details'>
+                        <Col>
+                            <Image src={selectedCardData.img} thumbnail className='cardimage' />
+                        </Col>
+                        <Col className='card_deatails' md={6}>
+                            <div>
+                                <p>Size: 1200 sq. ft.</p>
+                                <p>Furnished: Yes</p>
+                                <p>Location: City, State</p>
+                            </div>
+                        </Col>
+                    </Row>
+                    <Row className='dealer' id="dealer-details">
+                        <h2>Dealer Details</h2>
+                        <Col>
+                            <Image src={selectedCardData.img} thumbnail className='dealerimage' />
+                        </Col>
+                        <Col className='dealer_deatails' md={6}>
+                            <div>
+                                <p>Name: John Doe</p>
+                                <p>Contact: john.doe@example.com</p>
+                                <p>Phone: +1234567890</p>
+                            </div>
+                        </Col>
+                    </Row>
+
+                    <div className='similar' id='similar-details'>
+                        <h2>Similar Properties</h2>
+                        <div className="similar-properties-container">
+                            {similarProperties.map(property => (
                                 <div
                                     onClick={() => handleSimilarCardClick(property.key)}
                                     style={{ cursor: 'pointer' }}
@@ -155,12 +155,13 @@ function Carddetail(props) {
                                         </Card.Body>
                                     </Card>
                                 </div>
-                            </Col>
-                        ))}
-                    </Row>
-                </div>
-            </Container>
-        </div>
+                            ))}
+                        </div>
+                    </div>
+                </Container>
+            </div>
+            <Footer />
+        </dev>
     );
 }
 
