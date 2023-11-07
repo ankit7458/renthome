@@ -360,7 +360,7 @@ body {
 .card_header {
     display: flex;
     flex-direction: column;
-    align-items: left; /* Center the content and buttons vertically */
+    align-items: left; 
 }
 
 /* Post Property Section */

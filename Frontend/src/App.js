@@ -12,6 +12,7 @@ import Feedback from './components/Footer_Components/Feedback';
 import Footer from './components/Footer';
 import PostProperty from './components/Carousel Components/PostProperty';
 import YourProfile from './components/Profile/YourProfile';
+import Similarproperties from './components/Roomcards/Similarproperties'; 
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path="/Roomcards/Carddetail/:cardkey" element={<Carddeatail />} />
           <Route path="/PostProperty" element={<PostProperty />} />
           <Route path="/Profile/YourProfile" element={<YourProfile />}/>
+          <Route path="/similar-properties" element={<Similarproperties />} />
         </Routes>
         {/* <Footer /> */}
       </div>

@@ -9,46 +9,52 @@ import data from '../../dummydata';
 import Image from 'react-bootstrap/Image';
 import { Link } from 'react-router-dom';
 import Footer from '../Footer';
+import roomcard from './roomcard.css';
+import Similarproperties from './Similarproperties';
 
 
-
+export let currentPrice = 0;
 function Carddetail(props) {
 
-
-    // Use useEffect to scroll to the top of the page when the component mounts
-    useEffect(() => {
-        document.body.scrollIntoView({ behavior: 'smooth' });
-    }, []);
-
-    // Initialize navigate hook to programmatically navigate to other pages
-    const navigate = useNavigate();
-
-    // Extract cardkey from the route parameters
-    const { cardkey } = useParams();
-
-    // Find the selected card's data based on the cardkey
-    const selectedCardData = data.find(item => item.key == cardkey);
-    const currentPrice = selectedCardData.price;
-
-    // Define the price range to filter similar properties
-    const priceRange = 3000;
-
-    // Filter similar properties based on price difference
-    const similarProperties = data.filter(item => {
-        const priceDifference = Math.abs(item.price - currentPrice);
-        return priceDifference <= priceRange && item.key !== selectedCardData.key;
-
-    });
-
-    // Function to handle click on similar property cards and navigate
-    const handleSimilarCardClick = (propertyKey) => {
-        navigate(`/Roomcards/Carddetail/${propertyKey}`);
-        document.body.scrollIntoView({ behavior: 'smooth' });
-    };
+// Use useEffect to scroll to the top of the page when the component mounts
+useEffect(() => {
+    document.body.scrollIntoView({ behavior: 'smooth' });
+}, []);
 
 
+
+// Initialize navigate hook to programmatically navigate to other pages
+const navigate = useNavigate();
+
+// Extract cardkey from the route parameters
+const { cardkey } = useParams();
+
+// Find the selected card's data based on the cardkey
+const selectedCardData = data.find(item => item.key == cardkey);
+currentPrice = selectedCardData.price;
+
+// console.log(global.currentPrice)
+// Define the price range to filter similar properties
+const priceRange = 3000;
+
+// Filter similar properties based on price difference
+const similarPropertiesdata = data.filter(item => {
+    const priceDifference = Math.abs(item.price - currentPrice);
+    return priceDifference <= priceRange && item.key !== selectedCardData.key;
+
+});
+// Function to handle click on similar property cards and navigate
+const handleSimilarCardClick = (propertyKey) => {
+    navigate(`/Roomcards/Carddetail/${propertyKey}`);
+    document.body.scrollIntoView({ behavior: 'smooth' });
+};
+
+{<Similarproperties selectedCardPrice={selectedCardData.price} /> }
+// const handleViewMoreClick = () => {
+//     navigate(`/similar-properties?data=${JSON.stringify(similarProperties)}`);
+// };
     return (
-        <dev>
+        <div>
             <div className='card_detail_body'>
                 <Container className='card_detail'>
                     <Row className='card_header'>
@@ -131,9 +137,14 @@ function Carddetail(props) {
                     </Row>
 
                     <div className='similar' id='similar-details'>
-                        <h2>Similar Properties</h2>
+                        <div className='similar_header'>
+                            <h2>Similar Properties</h2>
+                            <Link to="/similar-properties">
+                                <Button variant="outline-dark">View more</Button>
+                            </Link>
+                        </div>
                         <div className="similar-properties-container">
-                            {similarProperties.map(property => (
+                            {similarPropertiesdata.map(property => (
                                 <div
                                     onClick={() => handleSimilarCardClick(property.key)}
                                     style={{ cursor: 'pointer' }}
@@ -161,8 +172,9 @@ function Carddetail(props) {
                 </Container>
             </div>
             <Footer />
-        </dev>
+        </div>
     );
 }
 
 export default Carddetail;
+
